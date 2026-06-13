@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/backgroud">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="📋 Alunos Cadastrados"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="6dp" />
+
+    <TextView
+        android:id="@+id/tv_total_alunos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="#CCFFFFFF"
+        android:textSize="13sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="12dp" />
+
+    <EditText
+        android:id="@+id/edit_pesquisa_aluno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="🔍  Pesquisar por nome exato"
+        android:textColorHint="#AAFFFFFF"
+        android:textColor="@color/white"
+        android:inputType="text"
+        android:background="@android:color/transparent"
+        android:padding="12dp"
+        android:textSize="15sp"
+        android:layout_marginHorizontal="8dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#44FFFFFF"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="8dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_alunos"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingTop="4dp"
+        android:clipToPadding="false" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:paddingVertical="8dp">
+
+        <LinearLayout
+            android:id="@+id/ll_paginas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:paddingHorizontal="16dp"
+            android:gravity="center_vertical" />
+
+    </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/tv_voltar_alunos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="← Voltar ao menu"
+        android:textColor="#FFD700"
+        android:textSize="14sp"
+        android:padding="20dp"
+        android:layout_gravity="center_horizontal" />
+
+</LinearLayout>

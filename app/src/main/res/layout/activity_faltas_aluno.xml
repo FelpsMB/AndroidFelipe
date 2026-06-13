@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@drawable/backgroud">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📊 Faltas por Aluno"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="6dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Busque pelo nome ou matrícula do aluno"
+            android:textColor="#CCFFFFFF"
+            android:textSize="13sp"
+            android:layout_marginBottom="20dp" />
+
+        <EditText
+            android:id="@+id/edit_busca_aluno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nome ou matrícula"
+            android:textColorHint="#AAFFFFFF"
+            android:textColor="@color/white"
+            android:inputType="text"
+            android:background="@android:color/transparent"
+            android:padding="12dp"
+            android:textSize="16sp"
+            android:layout_marginBottom="4dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#66FFFFFF"
+            android:layout_marginBottom="16dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_buscar_faltas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🔍  Buscar"
+            style="@style/button"
+            android:layout_marginBottom="24dp" />
+
+        <LinearLayout
+            android:id="@+id/container_resultados"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
+        <TextView
+            android:id="@+id/tv_nao_encontrado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Aluno não encontrado"
+            android:textColor="#CCFFFFFF"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_voltar_faltas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="← Voltar ao menu"
+            android:textColor="#FFD700"
+            android:textSize="14sp"
+            android:layout_marginTop="24dp"
+            android:layout_gravity="center_horizontal" />
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
